@@ -4,27 +4,41 @@ from .models import Portfolio, Hobbies
 
 
 # Create your views here.
-def home(request):
-    return HttpResponse('<h1>About Dale</h1><br>'
-                        '<hr>'
-                        '<p>A little bit about myself. I am an Author and a Writer. I have my first book on '
-                        'the Kindle Store. It is currently being published in paperback by Pegasus Publishing, '
-                        'and will be out later this year in stores Worldwide.</p><br>'
-                        '<p>Right now, I am finishing my degree in Computer Science while writing the follow-up '
-                        'book to my first book. What I plan on doing with my Computer Science degree? Write '
-                        'Android Apps on the side.</p>')
+def index(request):
+    return render(request, 'PortfolioDatabase/index.html')
 
 
 def hobbies(request):
     h_name = Hobbies.objects.all()
-    return HttpResponse(h_name)
+    context = {
+        'h_name': h_name,
+    }
+    return render(request, 'PortfolioDatabase/hobbies.html', context)
 
 
 def portfolio(request):
     p_name = Portfolio.objects.all()
-    return HttpResponse(p_name)
+    context = {
+        'p_name': p_name,
+    }
+    return render(request, 'PortfolioDatabase/portfolio.html', context)
 
 
 def contact(request):
-    return HttpResponse("<h1>Dale's Contact</h2><br>"
-                        "<p>daleromney@mail.weber.edu</p>")
+    return render(request, 'PortfolioDatabase/contact.html')
+
+
+def h_details(request, item_id):
+    item = Hobbies.objects.get(pk=item_id)
+    context = {
+        'item': item
+    }
+    return render(request, 'PortfolioDatabase/h_details.html', context)
+
+
+def p_details(request, item_id):
+    item = Portfolio.objects.get(pk=item_id)
+    context = {
+        'item': item
+    }
+    return render(request, 'PortfolioDatabase/p_details.html', context)

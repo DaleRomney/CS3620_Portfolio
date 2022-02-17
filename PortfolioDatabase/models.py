@@ -9,6 +9,7 @@ class Hobbies(models.Model):
 
     h_name = models.CharField(max_length=200)
     h_desc = models.CharField(max_length=200)
+    h_image = models.CharField(max_length=500, default="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVsf9a8CMJ07MTLXvICC1qn8EkFqbZaacuww&usqp=CAU")
 
 
 class Portfolio(models.Model):
@@ -18,3 +19,4 @@ class Portfolio(models.Model):
 
     p_name = models.CharField(max_length=200)
     p_desc = models.CharField(max_length=200)
+    p_image = models.CharField(max_length=500, default="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWJYOlsYxx93OW2G8M30CE83UGgTWbcZKObA&usqp=CAU")
