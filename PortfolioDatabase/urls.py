@@ -7,6 +7,6 @@ urlpatterns = [
     path('hobbies/', views.hobbies, name="hobbies"),
     path('portfolio/', views.portfolio, name="portfolio"),
     path('contact/', views.contact, name="contact"),
-    path('<int:item_id>', views.h_details, name="h_details"),
-    path('<int:item_id>', views.p_details, name="p_details"),
+    path('hobbies/<int:item_id>', views.h_details, name="h_details"),
+    path('portfolio/<int:item_id>', views.p_details, name="p_details"),
 ]

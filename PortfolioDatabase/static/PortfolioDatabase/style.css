@@ -1,0 +1,29 @@
+div{
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+a.navbar-brand{
+    margin-left: 25px;
+}
+
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+h2{
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+h3{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+h5{
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+}
