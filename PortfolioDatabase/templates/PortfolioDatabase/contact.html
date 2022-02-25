@@ -10,9 +10,17 @@
 </head>
 <body>
 {% block body %}
-    <h1>Dale's Contact</h1>
-    <br>
-    <p>daleromney@mail.weber.edu</p>
+    {% if user.is_authenticated %}
+        <a href="{% url 'PortfolioDatabase:create_contact' %}" class="btn btn-primary">Add Contact</a>
+    {% endif %}
+    {%  for item in c_name %}
+        <div class="row">
+            <div class="col-md-4">
+                <h3>{{ item.h_name }}</h3>
+                <h5>{{ item.h_desc }}</h5>
+            </div>
+        </div>
+    {% endfor %}
 {% endblock %}
 </body>
 </html>

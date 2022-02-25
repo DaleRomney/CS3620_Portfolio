@@ -20,3 +20,13 @@ class Portfolio(models.Model):
     p_name = models.CharField(max_length=200)
     p_desc = models.CharField(max_length=200)
     p_image = models.CharField(max_length=500, default="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWJYOlsYxx93OW2G8M30CE83UGgTWbcZKObA&usqp=CAU")
+
+
+class Contact(models.Model):
+
+    c_name = models.CharField(max_length=200)
+    c_email = models.CharField(max_length=200)
+    c_message = models.CharField(max_length=500, default="Personal Message goes here.")
+
+    def __str__(self):
+        return 'Name: ' + self.c_name + '<br> Email: ' + self.c_email + '<br> Personal Message: ' + self.c_message

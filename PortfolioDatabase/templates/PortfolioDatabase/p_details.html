@@ -8,8 +8,10 @@
             <div class="col-md-6">
                 <h1>{{ item.p_name }}</h1>
                 <h2>{{ item.p_desc }}</h2>
+                {%  if user.is_authenticated %}
+                <a href="{%  url 'PortfolioDatabase:delete_item' item.id %}">Delete</a>
+                {% endif %}
             </div>
         </div>
     </div>
-
 {% endblock %}
