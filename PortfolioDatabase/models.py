@@ -29,4 +29,4 @@ class Contact(models.Model):
     c_message = models.CharField(max_length=500, default="Personal Message goes here.")
 
     def __str__(self):
-        return 'Name: ' + self.c_name + '<br> Email: ' + self.c_email + '<br> Personal Message: ' + self.c_message
+        return 'Name: ' + self.c_name + ' Email: ' + self.c_email + ' Personal Message: ' + self.c_message
